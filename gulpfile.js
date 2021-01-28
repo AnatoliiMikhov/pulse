@@ -16,22 +16,20 @@ function server(){
 };
 
 function styles(){
-	return src("src/sass/*.+(sass|scss)")
+	return src("src/sass/**/*.+(sass|scss)")
 		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 		.pipe(rename({
 			prefix: "",
 			suffix: ".min",
 		}))
-		.pipe(autoprefixer({
-			cascade: false
-		}))
+		.pipe(autoprefixer())
 		.pipe(cleanCSS({compatibility: 'ie8'}))
 		.pipe(dest("src/css"))
 		.pipe(stream());
 };
 
 function tracking(){
-	watch('src/sass/*.+(sass|scss)', styles);
+	watch('src/sass/**/*.+(sass|scss)', styles);
 	watch('src/*html').on('change', reload)
 };
 
