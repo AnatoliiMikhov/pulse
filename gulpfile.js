@@ -4,7 +4,7 @@ const {init, stream, reload} = require('browser-sync');
 const rename = require("gulp-rename");
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
-
+const sourcemaps = require('gulp-sourcemaps');
 
 // Static server
 function server(){
@@ -17,6 +17,7 @@ function server(){
 
 function styles(){
 	return src("src/sass/**/*.+(sass|scss)")
+		.pipe(sourcemaps.init())
 		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 		.pipe(rename({
 			prefix: "",
@@ -24,6 +25,7 @@ function styles(){
 		}))
 		.pipe(autoprefixer())
 		.pipe(cleanCSS({compatibility: 'ie8'}))
+		.pipe(sourcemaps.write('./'))
 		.pipe(dest("src/css"))
 		.pipe(stream());
 };

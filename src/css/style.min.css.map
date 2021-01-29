@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAGA,EACC,YAAA,iBAAA,CAAA,WACA,WAGA,UAAA,MACA,OAAA,EAAA","file":"style.min.css","sourcesContent":["@import 'base/variables';\n@import 'base/mixins';\n\n* {\n\tfont-family: 'Museo Sans Cyrl', sans-serif;\n}\n\n.container {\n\tmax-width: 950px;\n\tmargin: 0 auto;\n}\n"]}
