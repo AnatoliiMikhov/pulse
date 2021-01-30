@@ -17,6 +17,14 @@
 		href="css/font.css"
 	>
 	<link
+		rel="preconnect"
+		href="https://fonts.gstatic.com"
+	>
+	<link
+		href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;500&display=swap"
+		rel="stylesheet"
+	>
+	<link
 		rel="stylesheet"
 		href="css/style.min.css"
 	>
@@ -24,7 +32,7 @@
 
 <body>
 	<main>
-		<div class="promo">
+		<section class="promo">
 			<div class="container">
 				<header class="header">
 					<a
@@ -47,10 +55,89 @@
 							href="tel:+74999228974"
 							class="header__phone"
 						>+7 (499) 922-89-74</a>
+						<button class="button header__button">заказать звонок</button>
 					</div>
 				</header>
+				<div class="promo__wrapper">
+					<h1 class="promo__heading promo__heading_level_1">Подбор пульсометра</h1>
+					<h2 class="promo__heading promo__heading_level_2">с учётом Вашего уровня подготовки</h2>
+					<div class="promo__icons">
+						<div class="promo__icon">
+							<img
+								src="icons/main_screen/timer.png"
+								alt="timer"
+							>
+							<div class="promo__icon_descr">Время подбора:<br>10 минут</div>
+						</div>
+						<div class="promo__icon">
+							<img
+								src="icons/main_screen/hand-cart.png"
+								alt="hand-cart"
+							>
+							<div class="promo__icon_descr">Бесплатная доставка</div>
+						</div>
+						<div class="promo__icon">
+							<img
+								src="icons/main_screen/messages.png"
+								alt="messages"
+							>
+							<div class="promo__icon_descr">Ответим на все вопросы</div>
+						</div>
+					</div><!-- icons (end) -->
+					<button class="button promo__button">заказать консультацию</button>
+					<div class="promo__link">
+						<span>или</span>
+						<a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
+					</div>
+				</div>
 			</div>
-		</div>
+		</section><!-- promo -->
+
+		<section class="advantages">
+			<div class="container">
+				<h2 class="advantages__heading_level_2">НАШИ ПРЕИМУЩЕСТВА</h2>
+				<div class="advantages__wrapper">
+
+					<div class="advantages__elem">
+						<img
+							src="icons/advantages/cup.png"
+							alt="Cup"
+							class="advantages__icon"
+						>
+						<h3 class="advantages__heading_level_3">Делимся опытом</h3>
+						<div class="advantages__descr">Наши сотрудники всегда готовы поделиться своим опытом, так как
+							сами бегают полумарафоны, переплыли Босфор, готовятся к
+							соревнованиям по триатлону!</div>
+					</div>
+
+					<div class="advantages__elem">
+						<img
+							src="icons/advantages/heart.png"
+							alt="Heart"
+							class="advantages__icon"
+						>
+						<h3 class="advantages__heading_level_3">Заботимся о здоровье</h3>
+						<div class="advantages__descr">Мы работаем для того, чтобы Ваши занятия спортом шли на пользу
+							Вашему здоровью и были в радость Вам и Вашим близким!</div>
+					</div>
+
+					<div class="advantages__elem">
+						<img
+							src="icons/advantages/shoe.png"
+							alt="Shoe"
+							class="advantages__icon"
+						>
+						<h3 class="advantages__heading_level_3">Учим бегать</h3>
+						<div class="advantages__descr">Помогаем с обучением правильной технике бега! Дружим с крупнейшей
+							школой бега в России - <a
+								href="#"
+								class="advantages__link"
+							>I LOVE RUNNING.</a> </div>
+					</div>
+
+				</div>
+			</div>
+		</section><!-- advantages -->
 	</main>
 
 	<script src="js/script.js"></script>
