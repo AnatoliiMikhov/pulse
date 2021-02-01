@@ -21,7 +21,8 @@
 
 @media (max-width: 575.98px) {
 	.carousel {
-		padding: 20px 0 28px;
+		min-height: 400px;
+		padding: 20px 0 0;
 
 		.swiper {
 
@@ -43,14 +44,34 @@
 	}
 }
 
+@media(max-width: 424.98px) {
+	.carousel {
+		min-height: 300px;
 
-@media (max-width: 374.98px){
-	.carousel{
-		.swiper{
+		.swiper {
+			&-pagination {
+				display: block;
+
+				&-bullet {
+					margin: 0 8px !important;
+					outline: none;
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 374.98px) {
+	.carousel {
+		.swiper {
+
 			&-button-next,
-			&-button-prev{
+			&-button-prev {
 				display: none;
 			}
+
+
 		}
 	}
 }
