@@ -1,0 +1,56 @@
+@media (max-width: 991.98px) {
+	.carousel {
+		padding: 40px 0 48px;
+
+		.swiper {
+			&-slide {
+				img {
+					width: 80%;
+				}
+			}
+
+			&-button-next,
+			&-button-prev {
+				opacity: 0.6;
+				outline: none;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 575.98px) {
+	.carousel {
+		padding: 20px 0 28px;
+
+		.swiper {
+
+			&-button-next,
+			&-button-prev {
+				&::after {
+					font-size: 2rem;
+				}
+			}
+
+			&-button-prev {
+				left: 2px;
+			}
+
+			&-button-next {
+				right: 2px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 374.98px){
+	.carousel{
+		.swiper{
+			&-button-next,
+			&-button-prev{
+				display: none;
+			}
+		}
+	}
+}
