@@ -41,9 +41,13 @@
 
 	&__content {
 		margin-top: 60px;
-		display: flex;
+		display: none;
 		justify-content: space-around;
 		flex-wrap: wrap;
+
+		&_active {
+			display: flex;
+		}
 	}
 
 	&-item {
@@ -92,17 +96,25 @@
 			text-transform: uppercase;
 			color: $catalog_link;
 
-			&_back {
-				font-weight: 500;
-				font-size: 14px;
+			&:hover {
 				color: $catalog_link;
-				text-decoration: underline;
-				text-transform: uppercase;
-				position: absolute;
-				bottom: 0;
-				left: 50%;
-				transform: translateX(calc(-50% - 10px));
 			}
+		}
+
+		&__back {
+			display: block;
+			width: 100%;
+			padding: 20px 0;
+			position: absolute;
+			bottom: -20px;
+			left: 50%;
+			font-weight: 500;
+			font-size: 14px;
+			text-align: center;
+			text-decoration: underline;
+			text-transform: uppercase;
+			color: $catalog_link;
+			transform: translateX(calc(-50% - 10px));
 
 			&:hover {
 				color: $catalog_link;
