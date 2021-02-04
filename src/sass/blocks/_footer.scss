@@ -1,0 +1,63 @@
+.footer {
+	position: relative;
+
+	iframe{
+		width: 100%;
+		height: 500px;
+		border: none;
+	}
+
+	&__info {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 460px;
+		height: 270px;
+		padding: 50px 0 56px;
+		background-color: $map_info;
+	}
+
+	&__address {
+		font-weight: 500;
+		font-size: 20px;
+		color: #ffffff;
+		text-align: center;
+	}
+
+	&__phone {
+		font-size: 20px;
+		font-weight: 700;
+		display: block;
+		text-align: center;
+		color: #ffffff;
+
+		&:hover {
+			color: #ffffff;
+		}
+	}
+
+	&__social {
+		display: flex;
+		margin-top: 36px;
+		justify-content: center;
+
+		&-icon {
+			display: block;
+			width: 52px;
+			height: 52px;
+			margin: 0 13px;
+			border: 2px solid #ffffff;
+			border-radius: 50%;
+			cursor: pointer;
+			@include flex_center;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
