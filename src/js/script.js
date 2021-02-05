@@ -57,4 +57,42 @@ $(document).ready(function () {
 	});
 	// modal script end
 
+	// Validation
+	function validateForm(form) {
+		$(form).validate({
+			rules: {
+				user_name: {
+					user_name: {
+						required: true,
+						user_name: true
+					},
+					phone: {
+						required: true,
+						phone: true
+					},
+					email: {
+						required: true,
+						email: true
+					}
+				}
+			},
+			messages: {
+				user_name: "Введите ваше имя",
+				phone: {
+					required: "Введите номер телефона",
+					phone: "Формат номера +380XXXXXXXXX"
+				},
+				email: {
+					required: "Для контакта нужен email адрес",
+					email: "Формат email: name@domain.com"
+				}
+			}
+		});
+	}
+
+	validateForm('.consultation form');
+	validateForm('#modal-consultation .feed-form');
+	validateForm('#modal-order .feed-form');
+	// Validation end
+
 });

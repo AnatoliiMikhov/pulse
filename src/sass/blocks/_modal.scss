@@ -43,6 +43,11 @@
 	&_thanks {
 		min-height: 140px;
 	}
+
+	label.error{
+		color: $error;
+		margin-bottom: 1rem;
+	}
 }
 
 #modal-consultation,

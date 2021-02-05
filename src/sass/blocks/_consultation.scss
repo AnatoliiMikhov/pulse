@@ -9,4 +9,9 @@
 		line-height: 30px;
 		color: #fff;
 	}
+
+	label.error{
+		color: $error;
+		margin-bottom: 1rem;
+	}
 }
