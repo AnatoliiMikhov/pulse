@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+	// slider carousel
 	const swiper = new Swiper('.swiper-container', {
 		loop: true,
 		navigation: {
@@ -34,5 +35,26 @@ $(document).ready(function () {
 
 	toggleTabs('.catalog-item__link');
 	toggleTabs('.catalog-item__back');
+	// tabs script end
+
+	// Modal script
+	$('[data-modal=consultation]').on('click', function () {
+		$('.overlay, #modal-consultation').fadeIn('fast');
+	});
+
+	$('.modal__close').on('click', function () {
+		$('.overlay, #modal-consultation, #modal-order, #modal-thanks').fadeOut();
+	});
+
+	$('.catalog-item__button').on('click', function () {
+		$('.overlay, #modal-order').fadeIn();
+	});
+
+	$('.catalog-item__button').each(function (i) {
+		$(this).on('click', function () {
+			$('#modal-order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+		});
+	});
+	// modal script end
 
 });
