@@ -62,37 +62,35 @@ $(document).ready(function () {
 		$(form).validate({
 			rules: {
 				user_name: {
-					user_name: {
-						required: true,
-						user_name: true
-					},
-					phone: {
-						required: true,
-						phone: true
-					},
-					email: {
-						required: true,
-						email: true
-					}
+					required: true,
+					minlength: 2
+				},
+				phone: "required",
+				email: {
+					required: true,
+					email: true
 				}
 			},
 			messages: {
-				user_name: "Введите ваше имя",
-				phone: {
-					required: "Введите номер телефона",
-					phone: "Формат номера +380XXXXXXXXX"
+				user_name: {
+					required: "Пожалуйста, введите свое имя",
+					minlength: jQuery.validator.format("Введите минимум {0} символа!")
 				},
+				phone: "Пожалуйста, введите свой номер телефона",
 				email: {
-					required: "Для контакта нужен email адрес",
-					email: "Формат email: name@domain.com"
+					required: "Пожалуйста, введите свою почту",
+					email: "Format email: username@hostname.dom"
 				}
 			}
 		});
 	}
 
-	validateForm('.consultation form');
+	validateForm('.consultation .feed-form');
 	validateForm('#modal-consultation .feed-form');
 	validateForm('#modal-order .feed-form');
 	// Validation end
 
+
+	// Masked phome number
+	$('input[name=phone]').mask('+38 (099)-999-99-99');
 });
