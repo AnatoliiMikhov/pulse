@@ -43,11 +43,11 @@ $(document).ready(function () {
 	});
 
 	$('.modal__close').on('click', function () {
-		$('.overlay, #modal-consultation, #modal-order, #modal-thanks').fadeOut();
+		$('.overlay, #modal-consultation, #modal-order, #modal-thanks').fadeOut("fast");
 	});
 
 	$('.catalog-item__button').on('click', function () {
-		$('.overlay, #modal-order').fadeIn();
+		$('.overlay, #modal-order').fadeIn("fast");
 	});
 
 	$('.catalog-item__button').each(function (i) {
@@ -85,11 +85,12 @@ $(document).ready(function () {
 		});
 	}
 
+
+
 	validateForm('.consultation .feed-form');
 	validateForm('#modal-consultation .feed-form');
 	validateForm('#modal-order .feed-form');
 	// Validation end
-
 
 	// Masked phome number
 	$('input[name=phone]').mask('+38 (099)-999-99-99');
@@ -98,16 +99,26 @@ $(document).ready(function () {
 	$('form').submit(function (e) {
 		e.preventDefault();
 
+		if (!$(this).valid()) {
+			return;
+		}
+
 		$.ajax({
-			type: 'POST',
+			type: "POST",
 			url: "mailer/smart.php",
 			data: $(this).serialize()
 		}).done(function () {
-			$(this).find('input').val('');
 
+			console.log("Данные отправлены на сервер...");
+
+			$(this).find('input').val('');
+			$('#modal-consultation, #modal-order').fadeOut("fast");
+			$('.overlay, #modal-thanks').fadeIn("fast");
 
 			$('form').trigger('reset');
 		});
 		return false;
 	});
+
+
 });
