@@ -34,10 +34,22 @@
 		img {
 			width: 100%;
 		}
+
+		&_cup{
+			animation: cup 1.2s infinite ;
+		}
+
+		&_shoewalk {
+			animation: shoewalk 2s infinite;
+		}
+
+		&_heartbeat {
+			animation: heartbeat 0.8s infinite;
+		}
 	}
 
+
 	&__descr {
-		// width: 240px;
 		margin-top: 20px;
 		font-weight: 300;
 		font-size: 14px;
