@@ -24,14 +24,17 @@
 		href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;500&display=swap"
 		rel="stylesheet"
 	>
-	<!-- <link
-		rel="stylesheet"
-		href="https://unpkg.com/swiper/swiper-bundle.css"
-	/> -->
+
 	<link
 		rel="stylesheet"
 		href="css/swiper-bundle.css"
 	>
+
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+	/>
+
 	<link
 		rel="stylesheet"
 		href="css/style.min.css"
@@ -691,7 +694,11 @@
 				<h2 class="title feed__title">отзывы клиентов</h2>
 
 				<div class="feed__wrapper">
-					<div class="feed-item">
+					<div
+						class="feed-item wow fadeInLeft"
+						data-wow-duration="0.6s"
+						data-wow-delay="0.3s"
+					>
 						<img
 							src="img/feed/photo_1.png"
 							alt="Ирина Иванченко"
@@ -713,7 +720,11 @@
 						</div>
 					</div>
 
-					<div class="feed-item">
+					<div
+						class="feed-item wow fadeInRight"
+						data-wow-duration="0.6s"
+						data-wow-delay="0.3s"
+					>
 						<img
 							src="img/feed/photo_2.png"
 							alt="Иван Сёмочкин"
@@ -736,7 +747,11 @@
 						</div>
 					</div>
 
-					<div class="feed-item">
+					<div
+						class="feed-item wow fadeInUp"
+						data-wow-duration="0.8s"
+						data-wow-delay="0.3s"
+					>
 						<img
 							src="img/feed/photo_3.png"
 							alt="Юлия Дашкина"
@@ -916,6 +931,8 @@
 	<script src="js/jquery.maskedinput.min.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+
+	<script src="js/wow.min.js"></script>
 
 	<script src="js/script.js"></script>
 
