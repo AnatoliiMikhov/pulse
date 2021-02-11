@@ -137,7 +137,14 @@ $(document).ready(function () {
 	});
 
 	// Wow animation
-	new WOW().init();
+	const wow = new WOW({
+		boxClass: 'wow',
+		animateClass: 'animate__animated',
+		offset: 200,
+		mobile: false,
+		live: true
+	})
+	wow.init();
 
 
 });
